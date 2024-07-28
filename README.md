@@ -2,7 +2,7 @@
 
 #### Ico space is a new color space I've been working on. It adresses some of the issues I have with Hex and sRGB space
 
-#### namely the fact given a value such as '64', its not immediately clear if this is a sRGB or HEX Color value, so in reality this value could mean:... 
+#### namely the fact given a value such as '64', its not immediately clear if this is a sRGB or HEX Color value, so in reality this value could mean... 
 
 `100 Decimal, 64 Hexidecimal,`
 
