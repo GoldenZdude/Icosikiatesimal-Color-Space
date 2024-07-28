@@ -26,7 +26,7 @@ This is madness! We must fix this.
 
   -  Again this isnt extremely difficult, but its easy to get tripped up and forget. Base 16 is not really that intuitive to us humans, so when we see something like 2F, it may be hard to remember that the decimal conversion is (2*16)+(F=15)=2F=47.
 
-  - It's simply very easy to get this wrong, especially if you are a child. You may think that if we have to Multiple 2 by 16, you also should multiple F by 16, which would give us (2*16)+(F=15),(15*16)=272.
+  - It's simply very easy to get this wrong, especially if you are a child. You may think that if we have to multiply 2 by 16, you also should multiple F by 16, which would give us (2*16)+(F=15),(15*16)=272.
 
   - When learning to convert hexadecimal colors to sRGB colors in my head, I found myself making this mistake all the time, and even now I find myself forgetting that you dont multiply the letters by 16.
 
