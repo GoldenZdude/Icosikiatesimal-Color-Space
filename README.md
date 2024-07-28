@@ -32,5 +32,5 @@ This is madness! We must fix this.
 
 - Icosikiatesimal Color Space attempts to make this a process a bit less demanding.
 
-- <span style="color: red;">This text is red.</span>
+
 
