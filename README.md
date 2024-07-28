@@ -31,3 +31,6 @@ This is madness! We must fix this.
 - When learning to convert hexadecimal colors to sRGB colors in my head, I found myself making this mistake all the time, and even now I find myself forgetting that you dont multiply the letters by 16.
 
 - Icosikiatesimal Color Space attempts to make this a process a bit less demanding.
+
+- <span style="color: red;">This text is red.</span>
+
