@@ -166,3 +166,7 @@ It may take a moment to get over the fact that A0 looks like it could only be a 
 It's designed to be compatible with hex and rgb, 
 
 So you're going to have to understand that #00A0A0 is now propery of both hex space and icosik space, and you're going to have to accept that (000, 100, 100) is now property of both sRGB space and icosik space as well.
+
+## ‘I hate you, you're dumb for making this 1. Because icosikiatesimal means base-28 and 2. This is already worse and more convoluted than converting from hexadecimal'
+
+Firstly wow, that's mean. :( Please be nice to me, this is my first color space I've ever invented. 
