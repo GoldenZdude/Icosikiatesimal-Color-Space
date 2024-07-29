@@ -203,6 +203,9 @@ So what if we want to convert back from ICO to HEX? This is where things get fun
 (144, 145, 105)
 
 144 can be broken down into 130 and 14 = DE instead of E4
+
 145 can be broken down into 130 and 15 = DF the same as before
+
 105 can be broken down into 100 and 5 = A5 instead of 9F
-![My Image](images/my-image.png)
+
+![My Image](Destructive-Conversion-Example.png)
