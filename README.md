@@ -193,6 +193,16 @@ DF = 13(0) + 15 == 145
 
 ***
 
-HEX #E4DF9F = ICO (144, 145, 105)```
+HEX #E4DF9F = ICO (144, 145, 105)
+```
 
 #### I already know what you’re thinking, don't you dare say it. I told you to be nice to me.
+
+So what if we want to convert back from ICO to HEX? This is where things get fun! And where icosik really starts to show its uniqueness. We can actually parse these values back in a number of ways, such that when we convert back we actually get a new color.
+
+(144, 145, 105)
+
+144 can be broken down into 130 and 14 = DE instead of E4
+145 can be broken down into 130 and 15 = DF the same as before
+105 can be broken down into 100 and 5 = A5 instead of 9F
+![My Image](images/my-image.png)
