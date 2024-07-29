@@ -32,5 +32,123 @@ This is madness! We must fix this.
 
   - Icosikiatesimal Color Space attempts to make this a process a bit less demanding.
 
+## In A World In Chaos… Where Love Has No Place… Two Heroes Fight For The Power Of Friendship 
 
+
+
+## I already know what you’re thinking
+
+
+
+## ‘It sounds like you’re gargling gravel’
+
+
+
+## And that’s honestly valid, but I promise you nominally more sane than Terrance Howard and this stuff is actually pretty cool and practical 
+
+
+
+## Mama Let’s Research
+
+
+
+#### I’m going to how to convert between hex colors sRGB colors and icosikaitesimal colors now I guess 
+
+
+
+Let’s go back to our original example, #00A0A0, this is a nice teal color, about 63% intensity in the blue-green channels and 0% intensity in the red channel. 
+
+
+
+We’ve already taken a look at how we would usually convert this to sRGB, which scales from 0-255 decimal, but let’s look at how we can convert it to Icosik, which scales from 0-165 decimal.
+
+
+
+First let’s separate our channels
+
+
+
+00 Red, A0 Green, A0 Blue
+
+
+
+I’m going to spoil that A0 is going to equal 100. Let’s see how. 
+
+
+
+We’re going to treat A0 a bit like it’s a decimal value, and less like it’s a set of hexadecimal values. 
+
+
+
+This is a bit like back in elementary school when we learn that to add 
+
+
+
+2.345 + 2.3411
+
+
+
+We have to make sure we line the numbers up at our decimal point so we don’t do something like 02.345 + 23.411 on accident 
+
+
+
+Working with hexadecimal is sometimes confusing for similar reasons. One of the first things you learn when getting introduced to hexadecimal is that A means 10, B means 11, and so on, so when you you see something like A0, it looks like it should be 10 + 0 = 10, it’s not really intuitive to understand that you’re supposed to go 10*16+0=160. 
+
+
+
+Icosik is only trying to help
+
+
+
+It’s not without its own rules, but it still has ends up being a good margin easier. I firmly believe you could teach a five year old how to do this in half the time it would take to teach a five year old how to do it the old fashioned way. 
+
+
+
+So let’s do it, how do we get #00A0A0 = ICO (000,100,100)?
+
+
+
+First well just work with each channel independently 00, A0, A0 is red, green, and blue. If you already knew about hex codes before you started reading this is all just review. Since blue and green will turn out the same after conversion, let’s just focus on A0. It doesn’t really matter if we’re talking about the blue or green channel for this particular example. We separate this channel further into its first value A and its second value 0. 
+
+
+
+Here come the fun part! Are you ready? We can assert that A is in the hundreds place as the first value of the channel, and 0 is in the ones place as the second value in the channel. This means our algorithm for conversion will have to look like this.
+
+A=10 
+
+0=0
+
+Then we set up our problem so we’re working with the hundreds place as our highest place 
+
+000 is our base
+
+10 is our A in hundreds place 
+
+0 is our 0 in one’s place
+
+So it should be like this right?
+
+000 base +
+
+10[0] +
+
+00[0] =
+
+100
+
+Or without brackets:
+
+
+
+000 base +
+
+100 +
+
+000=
+
+100
+
+
+
+So A is still 10 and A is always 10 and you don’t have to remember anything else other than A is 10 B is 11 C is 12 D is 13 E is 14 F is 15. You just have to remember that it matters what place they’re in. It’s simply like how 22 is equal to 20 + 2 not 2 + 2. So 0A will equal 10, and 10 will still equal 10 as well, and A0 will equal 100, because it matters if A is in the 1s place or the 100s place. ‘A’ by itself does not equal 100, it’s still 10. 
 
