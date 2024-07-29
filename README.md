@@ -4,7 +4,9 @@
 
 ## 22.0 + 1.0 + 2.0 + 5.0 = 28.0...
 
-### Ico Space~!
+#### Hey! That's not allowed!
+
+### Icosik Space~!
 
 - Ico/sik space Is a new color space I've been working on. It adresses some of the issues I have with Hex and sRGB space
 
