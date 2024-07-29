@@ -4,7 +4,7 @@
 
 ## 22 + 1 + 2 + 5 = 28...
 
-### Ico space~!
+### Ico Space~!
 
 - Ico/sik space Is a new color space I've been working on. It adresses some of the issues I have with Hex and sRGB space
 
