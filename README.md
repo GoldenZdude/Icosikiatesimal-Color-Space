@@ -47,7 +47,9 @@ Let’s go back to our original example, #00A0A0, this is a nice teal color, abo
 
 
 
-We’ve already taken a look at how we would usually convert this to sRGB, which scales from 0-255 decimal, but let’s look at how we can convert it to Icosik, which scales from 0-165 decimal.
+We’ve already taken a look at how we would usually convert this to sRGB, which scales from 0-255 decimal, but let’s look at how we can convert it to 
+
+## Icosik, which scales from 0-165 decimal.
 
 
 
