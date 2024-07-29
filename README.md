@@ -32,7 +32,7 @@ This is madness! We must fix this.
 
   - Icosikiatesimal Color Space attempts to make this a process a bit less demanding.
 
-## In A World In Chaos… Where Love Has No Place… Two Heroes Fight For The Power Of Friendship 
+## In A World In Chaos… 
 
 
 ### Mama Let’s Research
@@ -210,3 +210,6 @@ So what if we want to convert back from ICO to HEX? This is where things get fun
 
 ![My Image](https://github.com/GoldenZdude/Icosikiatesimal-Color-Space/blob/main/Destructive-Conversion-Example.png?raw=true)
 
+## Where Love Has No Place… 
+
+### If you say one more mean thing about "Wow this is so dumb" or "can't even convert his colors back correctly" im going to block you and cry. I've already asked you twice to be nice to me. 
