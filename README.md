@@ -71,7 +71,7 @@ This is a bit like back in elementary school when we learn that to add
 
 
 
-2.345 + 2.3411
+`2.345 + 2.3411`
 
 
 
@@ -100,11 +100,11 @@ First well just work with each channel independently 00, A0, A0 is red, green, a
 
 
 Here come the fun part! Are you ready? We can assert that A is in the hundreds place as the first value of the channel, and 0 is in the ones place as the second value in the channel. This means our algorithm for conversion will have to look like this.
-
+```
 A=10 
 
 0=0
-
+```
 Then we set up our problem so we’re working with the hundreds place as our highest place 
 
 000 is our base
@@ -114,7 +114,7 @@ Then we set up our problem so we’re working with the hundreds place as our hig
 0 is our 0 in one’s place
 
 So it should be like this right?
-
+```
 000 base +
 
 10[0] +
@@ -122,11 +122,11 @@ So it should be like this right?
 00[0] =
 
 100
-
+```
 Or without brackets:
 
 
-
+```
 000 base +
 
 100 +
@@ -134,12 +134,12 @@ Or without brackets:
 000=
 
 100
-
+```
 
 
 So A is still 10 and A is always 10 and you don’t have to remember anything else.
 
-Other than A is 10 B is 11 C is 12 D is 13 E is 14 F is 15. 
+Other than `A is 10 B is 11 C is 12 D is 13 E is 14 F is 15`. 
 
 You just have to remember that it matters what place they’re in. 
 
