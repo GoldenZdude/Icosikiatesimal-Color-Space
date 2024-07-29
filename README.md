@@ -144,3 +144,9 @@ So A is still 10 and A is always 10 and you don’t have to remember anything el
 ### I already know what you’re thinking
 
 #### "My name is John W. Turkey and this is not how hexadecimal works. A0 hexadecimal equals 160 decimal"
+
+### Don't worry I have a really good comback for this
+
+## "Icosikiatesimal is not Hexadecimal, A0 Hexadecimal may equal 160, but A0 Icosikiatesimal equals 100 Icosikiatesimal"
+
+It may take a moment to get over the fact that A0 looks like it could only be a hexadecimal value, but icosik is really its new thing. It's designed to be compatible with hex and rgb, so you're going to have to understand that #00A0A0 is now propery of both hex space and icosik space.
