@@ -169,4 +169,19 @@ So you're going to have to understand that #00A0A0 is now propery of both hex sp
 
 ## ‘I hate you, you're dumb for making this 1. Because icosikiatesimal means base-28 and 2. This is already worse and more convoluted than converting from hexadecimal'
 
-Firstly wow, that's mean. :( Please be nice to me, this is my first color space I've ever invented. 
+Firstly wow, that's mean. :( Please be nice to me, this is my first color space I've ever created.
+
+Secondly, the name icosikiatesimal is meaningful even though the system is not truly base-28.
+
+Firstly, by incorporating the ABCDEF from Hex, we get parts of a base-16 system and by incoporating FF = 165 we get elements of a base-12.65 system. 16+12.65 is 28.65 so it's not like the name is meaningless.
+
+Secondly, no way I toally dissagree that its harder! its definitely easier. lets take an example of a 'complicated' hex code like #E4DF9F. to find the RGB styled ICO values, we just seperate the channels and do the simple math that doesn't involve multiplying anything by 16
+```
+E4 = 14(0) + 4 == 144
+
+DF = 13(0) + 15 == 145
+
+9F = 9(0) + 15 == 105
+```
+***
+`#E4DF9F = (144, 145, 105)`
