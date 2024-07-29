@@ -137,7 +137,15 @@ Or without brackets:
 
 
 
-So A is still 10 and A is always 10 and you don’t have to remember anything else other than A is 10 B is 11 C is 12 D is 13 E is 14 F is 15. You just have to remember that it matters what place they’re in. It’s simply like how 22 is equal to 20 + 2 not 2 + 2. So 0A will equal 10, and 10 will still equal 10 as well, and A0 will equal 100, because it matters if A is in the 1s place or the 100s place. ‘A’ by itself does not equal 100, it’s still 10. 
+So A is still 10 and A is always 10 and you don’t have to remember anything else.
+
+Other than A is 10 B is 11 C is 12 D is 13 E is 14 F is 15. 
+
+You just have to remember that it matters what place they’re in. 
+
+It’s simply like how 22 is equal to 20 + 2 not 2 + 2. So 0A will equal 10, and 10 will still equal 10 as well, and A0 will equal 100, because it matters if A is in the 1s place or the 100s place. 
+
+‘A’ by itself does not equal 100, it’s still 10. 
 
 ## ‘It sounds like you’re gargling gravel’
 
@@ -149,4 +157,4 @@ So A is still 10 and A is always 10 and you don’t have to remember anything el
 
 ## "Icosikiatesimal is not Hexadecimal, A0 Hexadecimal may equal 160, but A0 Icosikiatesimal equals 100 Icosikiatesimal"
 
-It may take a moment to get over the fact that A0 looks like it could only be a hexadecimal value, but icosik is really its new thing. It's designed to be compatible with hex and rgb, so you're going to have to understand that #00A0A0 is now propery of both hex space and icosik space.
+It may take a moment to get over the fact that A0 looks like it could only be a hexadecimal value, but icosik is really its new thing. It's designed to be compatible with hex and rgb, so you're going to have to understand that #00A0A0 is now propery of both hex space and icosik space, and you're going to have to accept that (000, 100, 100) is now property of both sRGB space and icosik space as well.
