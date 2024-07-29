@@ -139,8 +139,8 @@ Or without brackets:
 
 So A is still 10 and A is always 10 and you don’t have to remember anything else other than A is 10 B is 11 C is 12 D is 13 E is 14 F is 15. You just have to remember that it matters what place they’re in. It’s simply like how 22 is equal to 20 + 2 not 2 + 2. So 0A will equal 10, and 10 will still equal 10 as well, and A0 will equal 100, because it matters if A is in the 1s place or the 100s place. ‘A’ by itself does not equal 100, it’s still 10. 
 
+## ‘It sounds like you’re gargling gravel’
+
 ### I already know what you’re thinking
 
-#### ‘It sounds like you’re gargling gravel’
-
-
+#### "My name is John W. Turkey and this is not how hexadecimal works. A0 hexadecimal equals 160 decimal"
