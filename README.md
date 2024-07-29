@@ -212,4 +212,4 @@ So what if we want to convert back from ICO to HEX? This is where things get fun
 
 ## Where Love Has No Place… 
 
-### If you say one more mean thing about "Wow this is so dumb" or "can't even convert his colors back correctly" im going to block you and cry. I've already asked you twice to be nice to me. 
+### If you say one more mean thing about "Wow this is so dumb" or "Ico can't even convert colors back correctly" im going to block you and cry. I've already asked you twice to be nice to me. 
