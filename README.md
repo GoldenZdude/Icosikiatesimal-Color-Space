@@ -192,4 +192,7 @@ DF = 13(0) + 15 == 145
 9F = 9(0) + 15 == 105
 
 ***
+
 HEX #E4DF9F = ICO (144, 145, 105)```
+
+#### I already know what you’re thinking, don't you dare say it. I told you to be nice to me.
