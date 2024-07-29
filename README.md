@@ -155,7 +155,7 @@ It’s simply like how 22 is equal to 20 + 2 not 2 + 2. So 0A will equal 10, and
 
 #### Don't worry I have a really good comback for this
 
-# "Icosikiatesimal is not Hexadecimal, and its not decimal either.
+# Icosikiatesimal is not Hexadecimal, and its not decimal either.
 
 ## A0 Hexadecimal may equal 160 decimal, but A0 Icosikiatesimal equals 100 Icosikiatesimal"
 
