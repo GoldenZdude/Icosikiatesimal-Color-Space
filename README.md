@@ -179,11 +179,11 @@ Secondly, no way I toally dissagree that its harder! its definitely easier. lets
 ```
 E4 = 
 
-E= 14(0) +
+E = 14(0) +
 
 4 = 4 == 
 
-140+4= 144
+140 + 4= 144
 
 similarly...
 
