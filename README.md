@@ -1,6 +1,6 @@
 # Icosikiatesimal Color Space
 
-### Bit Depth per Channel=log2 (166)≈7.375
+### Bit Depth per Channel = log2 (166 )≈ 7.375
 
 ### 7.375 × 3 = 22.125...
 
