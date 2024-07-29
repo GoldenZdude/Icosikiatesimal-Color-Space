@@ -149,15 +149,15 @@ It’s simply like how 22 is equal to 20 + 2 not 2 + 2. So 0A will equal 10, and
 
 ## ‘It sounds like you’re gargling gravel’
 
-### I already know what you’re thinking
+#### I already know what you’re thinking
 
-#### "My name is John W. Turkey and this is not how hexadecimal works. A0 hexadecimal equals 160 decimal"
+##### "My name is John W. Turkey and this is not how hexadecimal works. A0 hexadecimal equals 160 decimal"
 
-### Don't worry I have a really good comback for this
+#### Don't worry I have a really good comback for this
 
-## "Icosikiatesimal is not Hexadecimal, and its not decimal either.
+# "Icosikiatesimal is not Hexadecimal, and its not decimal either.
 
-### A0 Hexadecimal may equal 160 decimal, but A0 Icosikiatesimal equals 100 Icosikiatesimal"
+## A0 Hexadecimal may equal 160 decimal, but A0 Icosikiatesimal equals 100 Icosikiatesimal"
 
 It may take a moment to get over the fact that A0 looks like it could only be a hexadecimal value, but icosik is really its new thing. 
 
