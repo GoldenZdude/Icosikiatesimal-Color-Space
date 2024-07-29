@@ -177,7 +177,15 @@ Firstly, by incorporating the ABCDEF from Hex, we get parts of a base-16 system 
 
 Secondly, no way I toally dissagree that its harder! its definitely easier. lets take an example of a 'complicated' hex code like #E4DF9F. to find the RGB styled ICO values, we just seperate the channels and do the simple math that doesn't involve multiplying anything by 16
 ```
-E4 = 14(0) + 4 == 144
+E4 = 
+
+E= 14(0) +
+
+4 = 4 == 
+
+140+4= 144
+
+similarly...
 
 DF = 13(0) + 15 == 145
 
