@@ -222,3 +222,55 @@ So what if we want to convert back from ICO to HEX? This is where things get fun
 # Where Love Has No Place… 
 
 ### If you say one more mean thing about "Wow this is so dumb" or "Ico can't even convert colors back correctly" im going to block you and cry. I've already asked you twice to be nice to me. 
+
+## Converting 8 Digit RGBA Codes 
+
+Converting 8 digit codes (Red, Green, Blue, Alpha) from hex to Icosik follows similar steps.
+
+First, take your code, we can use #3366abcd
+
+Separate the channels 
+
+33, 66, AB, CD, 
+
+Channels without numbers simply stay as they are
+
+33 hex = 33 ico
+
+66 hex = 66 ico
+
+Channels with letters have to be calculated as previously discussed 
+
+A = 10(Tens), B = 11(Ones)
+
+A= 100
+
+B=11
+
+AB= 100+11== 111
+
+
+
+C= 12(Tens), D=13(Ones)
+
+C=120
+
+D=13
+
+CD= 120+13==133
+
+Final answer: #3366abcd = ICO (33, 66, 111, 133) 
+
+## RGBA to ICO
+
+So we’ve talked about hex to ico and hex with alpha to ico, now let’s discuss converting directly from RGBa to ICO with RGBa values above 165.
+
+This process sometimes results in a different answer then converting from hex, lets take a look.
+
+Let’s take a random RGBa value set such as 
+
+(222, 200, 190, 0.6)
+
+And let’s convert it to ICO
+
+Let’s look at our first value, 222, the value of the red channel
