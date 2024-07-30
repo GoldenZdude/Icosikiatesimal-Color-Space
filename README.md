@@ -223,23 +223,39 @@ So what if we want to convert back from ICO to HEX? This is where things get fun
 
 ### If you say one more mean thing about "Wow this is so dumb" or "Ico can't even convert colors back correctly" im going to block you and cry. I've already asked you twice to be nice to me. 
 
-## Converting 8 Digit RGBA Codes 
+Converting 8 Digit RGBA Codes 
 
 Converting 8 digit codes (Red, Green, Blue, Alpha) from hex to Icosik follows similar steps.
 
+
+
 First, take your code, we can use #3366abcd
+
+
 
 Separate the channels 
 
+
+
 33, 66, AB, CD, 
+
+
 
 Channels without numbers simply stay as they are
 
+
+
 33 hex = 33 ico
+
+
 
 66 hex = 66 ico
 
+
+
 Channels with letters have to be calculated as previously discussed 
+
+
 
 A = 10(Tens), B = 11(Ones)
 
@@ -251,7 +267,9 @@ AB= 100+11== 111
 
 
 
-C= 12(Tens), D=13(Ones)
+C= 12(Tens)
+
+D=13(Ones
 
 C=120
 
@@ -259,18 +277,80 @@ D=13
 
 CD= 120+13==133
 
+
+
 Final answer: #3366abcd = ICO (33, 66, 111, 133) 
+
+
 
 ## RGBA to ICO
 
 So we’ve talked about hex to ico and hex with alpha to ico, now let’s discuss converting directly from RGBa to ICO with RGBa values above 165.
 
+
+
 This process sometimes results in a different answer then converting from hex, lets take a look.
+
+
 
 Let’s take a random RGBa value set such as 
 
 (222, 200, 190, 0.6)
 
+
+
 And let’s convert it to ICO
 
+
+
 Let’s look at our first value, 222, the value of the red channel
+
+
+
+222/256 is .867 intensity , but we don’t want to be doing math we can’t do in our head, that was the point in the first place 
+
+
+
+222/166 is 1.337 intensity, but that isn’t much easier than before so it doesn’t really help us.
+
+
+
+So we’re going to do something else
+
+
+
+Let’s take 256-222, this is easy enough to do in our heads, the answer is 34. 
+
+
+
+Let’s take 256-200, the answer is 56.
+
+
+
+Let’s take 256-190, the answer is 66
+
+
+
+Then we can clip all our values above 165 to 165 and apply these values back subtracting from 165 
+
+
+
+165-66 = 99
+
+165-56 = 109
+
+165-34 = 131
+
+
+
+We can map these to our original scaled values A-B. 
+
+
+
+222=131 red 
+
+200=109 green
+
+190=99 blue 
+
+0.6 alpha
