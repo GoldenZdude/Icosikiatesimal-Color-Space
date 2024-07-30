@@ -347,10 +347,100 @@ We can map these to our original scaled values A-B.
 
 
 
-222=131 red 
+222-66=131 red 
 
 200=109 green
 
 190=99 blue 
 
 0.6 alpha
+
+Then lets test by converting to hex again
+
+131 red = 13(Tens) == (C) 
+1 red = 1(Ones) == (1)
+
+Red = C1
+
+109 green = 10(Tens) == A
+9 = 9(Ones)
+
+Green = A9
+
+99 Blue = 99
+
+Final Color (222, 200, 190, 0.6) = #C1A999
+
+We can use a simple script to check out answer
+
+```
+import tkinter as tk
+
+# Define custom conversion functions
+def icosikiatesimal_to_rgb(icosik_color):
+    def from_icosik(value):
+        # Convert icosikiatesimal value (0-165) to RGB (0-255)
+        decimal_value = int(value)
+        return int(decimal_value * 255 / 165)
+    
+    # Extract and convert icosik components
+    r = from_icosik(icosik_color['Red'])
+    g = from_icosik(icosik_color['Green'])
+    b = from_icosik(icosik_color['Blue'])
+    
+    return {
+        'Red': r,
+        'Green': g,
+        'Blue': b
+    }
+
+def update_color():
+    icosik_color = {
+        'Red': red_code.get().zfill(3),
+        'Green': green_code.get().zfill(3),
+        'Blue': blue_code.get().zfill(3)
+    }
+    
+    try:
+        rgb_values = icosikiatesimal_to_rgb(icosik_color)
+        
+        # Convert to hex color
+        hex_color = f"#{rgb_values['Red']:02X}{rgb_values['Green']:02X}{rgb_values['Blue']:02X}"
+        
+        # Update GUI components
+        color_display.config(bg=hex_color)
+        result_label.config(
+            text=f"RGB Values: Red: {rgb_values['Red']}, Green: {rgb_values['Green']}, Blue: {rgb_values['Blue']}\n"
+                 f"Hex Color: {hex_color}"
+        )
+    except ValueError:
+        result_label.config(text="Invalid Icosik Value. Use format 000-165.")
+        color_display.config(bg='white')
+
+# Create the main window
+root = tk.Tk()
+root.title("Icosikiatesimal Color Viewer")
+
+# Create and place widgets
+tk.Label(root, text="Enter Icosikiatesimal Color Values (000-165):").pack()
+tk.Label(root, text="Red:").pack()
+red_code = tk.Entry(root)
+red_code.pack()
+tk.Label(root, text="Green:").pack()
+green_code = tk.Entry(root)
+green_code.pack()
+tk.Label(root, text="Blue:").pack()
+blue_code = tk.Entry(root)
+blue_code.pack()
+
+tk.Button(root, text="Update Color", command=update_color).pack()
+
+color_display = tk.Label(root, text="Color Display", width=30, height=10, bg='white')
+color_display.pack()
+
+result_label = tk.Label(root, text="Color values will appear here.")
+result_label.pack()
+
+# Start the main loop
+root.mainloop()
+```
