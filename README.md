@@ -474,9 +474,9 @@ which is a good bit off from
 But this is not nessessarily supposed to be seen as a problem. If you want to remain precise you can just use sRGB or HEX space, the destructive conversion is really part of the fun.
 
 # Distribution of Colors
-
-Total colors analyzed: 196000 ICOSIK Space Colors
 ```
+Total colors analyzed: 196000 ICOSIK Space Colors
+
 Color Distribution:
 Gray: 18.35%
 Aqua: 3.54%
@@ -515,4 +515,6 @@ Yellow: 4.30%
 Black: 1.64%
 Lime: 3.47%
 Fuchsia: 4.35%
-White: 0.88%```
+White: 0.88%
+```
+There does seem to be a nominal differance between ICOSIK and HEX/RGB distribution of colors, the main differance being about 5% less grey/silver colors consistently. 
