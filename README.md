@@ -1,4 +1,4 @@
-![My Image1](https://github.com/GoldenZdude/Icosikiatesimal-Color-Space/blob/main/TLDR%20ICOSIK%20SPACE.png?raw=true)
+
 
 # Icosikiatesimal Color Space
 
