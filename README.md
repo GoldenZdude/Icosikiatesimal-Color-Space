@@ -497,7 +497,7 @@ Green: 3.81%
 Red: 4.26%
 White: 0.61%
 ```
-![My Image2](3https://github.com/GoldenZdude/Icosikiatesimal-Color-Space/blob/main/196k%20Hex.png?raw=true)
+![My Image3](https://github.com/GoldenZdude/Icosikiatesimal-Color-Space/blob/main/196k%20Hex.png?raw=true)
 
 ```
 Total colors analyzed: 196000 HEX/RGB Space Colors
