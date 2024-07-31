@@ -521,8 +521,9 @@ There does seem to be a nominal differance between ICOSIK and HEX/RGB distributi
 
 Here is the scripts I used to test this if you want to check my work
 
+Generate ICOSIK colors to plot
 ```
-# Generate ICOSIK colors in .txt
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -683,4 +684,57 @@ def analyze_color_distribution(file_path):
 
 # Run the analysis
 analyze_color_distribution('sampled_hex_colors_hex_196k.txt')
+```
+And this one is the control, to generate a list of HEX/RGB space colors
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+def hex_to_rgb(hex_color):
+    r = int(hex_color[1:3], 16)
+    g = int(hex_color[3:5], 16)
+    b = int(hex_color[5:7], 16)
+    return (r, g, b)
+
+def rgb_to_hex(rgb):
+    return '#{:02X}{:02X}{:02X}'.format(*rgb)
+
+# Generate all possible RGB values
+rgb_values = []
+for r in range(256):
+    for g in range(256):
+        for b in range(256):
+            rgb_values.append((r, g, b))
+
+# Convert to numpy array for plotting
+rgb_array = np.array(rgb_values)
+
+# Normalize RGB values to [0, 1]
+rgb_normalized = np.clip(rgb_array / 255.0, 0, 1)
+
+# Downsample data to reduce the number of points
+sample_size = 196000  # Choose a smaller sample size
+indices = np.random.choice(len(rgb_array), sample_size, replace=False)
+rgb_array_sampled = rgb_array[indices]
+rgb_normalized_sampled = rgb_normalized[indices]
+
+# Save sampled RGB values as hex codes to a file
+with open('sampled_hex_colors_hex_196k.txt', 'w') as file:
+    for rgb in rgb_array_sampled:
+        hex_color = rgb_to_hex(rgb)
+        file.write(hex_color + '\n')
+
+# Create a scatter plot for visualization
+plt.figure(figsize=(10, 10))
+sc = plt.scatter(rgb_array_sampled[:, 0], rgb_array_sampled[:, 1], c=rgb_normalized_sampled, s=1)
+plt.xlabel('Red')
+plt.ylabel('Green')
+plt.title('Standard RGB Color Distribution')
+
+# Add a colorbar to show the mapping of colors
+cbar = plt.colorbar(sc, orientation='vertical')
+cbar.set_label('Normalized Color Value')
+
+# Show the plot and block the script until the plot window is closed
+plt.show(block=True)
 ```
