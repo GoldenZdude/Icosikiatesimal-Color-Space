@@ -283,7 +283,7 @@ Final answer: #3366abcd = ICO (33, 66, 111, 133)
 
 
 
-## RGBA to ICO
+## RGB to ICO
 
 So we’ve talked about hex to ico and hex with alpha to ico, now let’s discuss converting directly from RGBa to ICO with RGBa values above 165.
 
