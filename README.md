@@ -518,3 +518,169 @@ Fuchsia: 4.35%
 White: 0.88%
 ```
 There does seem to be a nominal differance between ICOSIK and HEX/RGB distribution of colors, the main differance being about 5% less grey/silver colors consistently. 
+
+Here is the scripts I used to test this if you want to check my work
+
+```
+# Generate ICOSIK colors in .txt
+import matplotlib.pyplot as plt
+import numpy as np
+
+def hex_to_icosik(hex_color):
+    r = int(hex_color[1:3], 16)
+    g = int(hex_color[3:5], 16)
+    b = int(hex_color[5:7], 16)
+
+    def to_icosik(value):
+        high = value // 16
+        low = value % 16
+        return high * 10 + low
+
+    return {'Red': to_icosik(r), 'Green': to_icosik(g), 'Blue': to_icosik(b)}
+
+def icosik_to_rgb(icosik):
+    def to_rgb(value):
+        high = value // 10
+        low = value % 10
+        return high * 16 + low
+
+    r = to_rgb(icosik['Red'])
+    g = to_rgb(icosik['Green'])
+    b = to_rgb(icosik['Blue'])
+    return (r, g, b)
+
+def rgb_to_hex(rgb):
+    return '#{:02x}{:02x}{:02x}'.format(int(rgb[0]), int(rgb[1]), int(rgb[2]))
+
+# Generate all possible icosik values and map them to RGB
+icosik_values = []
+rgb_values = []
+for r in range(166):
+    for g in range(166):
+        for b in range(166):
+            icosik = {'Red': r, 'Green': g, 'Blue': b}
+            rgb = icosik_to_rgb(icosik)
+            icosik_values.append(icosik)
+            rgb_values.append(rgb)
+
+# Convert to numpy arrays for plotting
+rgb_array = np.array(rgb_values)
+
+# Downsample data to reduce the number of points
+sample_size = 196000 # Choose a smaller sample size
+indices = np.random.choice(len(rgb_array), sample_size, replace=False)
+rgb_array_sampled = rgb_array[indices]
+
+# Normalize RGB values to [0, 1] for color mapping
+rgb_normalized_sampled = rgb_array_sampled / 255.0
+
+# Clip the normalized values to ensure they are within [0, 1]
+rgb_normalized_sampled = np.clip(rgb_normalized_sampled, 0, 1)
+
+# Output sample size and sampled data to CLI
+print(f"Sample Size: {sample_size}")
+
+# Save the sampled RGB values as hex codes to a text file
+with open('sampled_rgb_values_196k.txt', 'w') as file:
+    for color in rgb_array_sampled:
+        hex_code = rgb_to_hex(color)
+        file.write(f"{hex_code}\n")
+
+# Create a scatter plot for visualization
+plt.figure(figsize=(10, 10))
+sc = plt.scatter(rgb_array_sampled[:, 0], rgb_array_sampled[:, 1], c=rgb_normalized_sampled, s=10, edgecolor='none')
+plt.xlabel('Red')
+plt.ylabel('Green')
+plt.title('Icosikiatesimal RGB Distribution')
+
+# Add a colorbar to show the mapping of colors
+cbar = plt.colorbar(sc, orientation='vertical')
+cbar.set_label('Normalized Color Value')
+
+# Show the plot and block the script until the plot window is closed
+plt.show(block=True)
+```
+***
+```
+# Generate stats and pie chart
+import numpy as np
+import matplotlib.pyplot as plt
+from collections import Counter
+
+# Define default colors and their hex codes
+default_colors = {
+    'Black': '#000000',
+    'Blue': '#0000FF',
+    'Lime': '#00FF00',
+    'Aqua': '#00FFFF',
+    'Red': '#FF0000',
+    'Fuchsia': '#FF00FF',
+    'Yellow': '#FFFF00',
+    'White': '#FFFFFF',
+    'Maroon': '#800000',
+    'Purple': '#800080',
+    'Green': '#008000',
+    'Teal': '#008080',
+    'Silver': '#C0C0C0',
+    'Gray': '#808080',
+    'Olive': '#808000',
+    'Navy': '#000080'
+}
+
+def hex_to_rgb(hex_code):
+    hex_code = hex_code.lstrip('#')
+    return tuple(int(hex_code[i:i+2], 16) for i in (0, 2, 4))
+
+def closest_color(hex_code):
+    rgb = hex_to_rgb(hex_code)
+    min_dist = float('inf')
+    closest_color_name = None
+    for color_name, color_hex in default_colors.items():
+        color_rgb = hex_to_rgb(color_hex)
+        dist = np.sqrt(sum((np.array(rgb) - np.array(color_rgb)) ** 2))
+        if dist < min_dist:
+            min_dist = dist
+            closest_color_name = color_name
+    return closest_color_name
+
+def analyze_color_distribution(file_path):
+    # Read hex codes from the file
+    with open(file_path, 'r') as file:
+        hex_codes = [line.strip() for line in file]
+
+    # Map hex codes to closest default color names
+    color_names = [closest_color(code) for code in hex_codes]
+
+    # Calculate color counts
+    color_count = Counter(color_names)
+    total_colors = len(color_names)
+    color_percentage = {color: count/total_colors*100 for color, count in color_count.items()}
+
+    # Print results
+    print("Color Distribution Analysis")
+    print("===========================")
+    print(f"Total colors analyzed: {total_colors}")
+    print("\nColor Distribution:")
+    for color, percentage in color_percentage.items():
+        print(f"{color}: {percentage:.2f}%")
+
+    # Visualizations
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+
+    # Pie chart of color distribution
+    pie_colors = [default_colors[color] for color in color_percentage.keys()]
+    ax1.pie(color_percentage.values(), labels=color_percentage.keys(), autopct='%1.1f%%', colors=pie_colors)
+    ax1.set_title('Color Distribution')
+
+    # Bar chart of color distribution
+    ax2.bar(color_percentage.keys(), color_percentage.values(), color=[default_colors[color] for color in color_percentage.keys()])
+    ax2.set_title('Color Distribution')
+    ax2.set_ylabel('Percentage')
+    ax2.set_xticklabels(color_percentage.keys(), rotation=90)
+
+    plt.tight_layout()
+    plt.show()
+
+# Run the analysis
+analyze_color_distribution('sampled_hex_colors_hex_196k.txt')
+```
