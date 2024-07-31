@@ -473,3 +473,46 @@ which is a good bit off from
 
 But this is not nessessarily supposed to be seen as a problem. If you want to remain precise you can just use sRGB or HEX space, the destructive conversion is really part of the fun.
 
+# Distribution of Colors
+
+Total colors analyzed: 196000 ICOSIK Space Colors
+```
+Color Distribution:
+Gray: 18.35%
+Aqua: 3.54%
+Navy: 4.37%
+Maroon: 4.47%
+Yellow: 4.03%
+Silver: 14.33%
+Black: 3.39%
+Olive: 9.73%
+Purple: 9.57%
+Fuchsia: 3.56%
+Lime: 3.35%
+Teal: 9.49%
+Blue: 3.13%
+Green: 3.81%
+Red: 4.26%
+White: 0.61%
+```
+
+```
+Total colors analyzed: 196000 HEX/RGB Space Colors
+
+Color Distribution:
+Gray: 19.67%
+Silver: 17.16%
+Blue: 3.46%
+Aqua: 4.30%
+Maroon: 3.18%
+Red: 3.40%
+Teal: 9.42%
+Purple: 9.39%
+Green: 3.21%
+Olive: 9.14%
+Navy: 3.02%
+Yellow: 4.30%
+Black: 1.64%
+Lime: 3.47%
+Fuchsia: 4.35%
+White: 0.88%```
