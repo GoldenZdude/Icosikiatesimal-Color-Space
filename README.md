@@ -293,9 +293,9 @@ This process sometimes results in a different answer then converting from hex, l
 
 
 
-Let’s take a random RGBa value set such as 
+Let’s take a random RGB value set such as 
 
-(222, 200, 190, 0.6)
+(222, 200, 190)
 
 
 
@@ -369,7 +369,7 @@ Green = A9
 
 99 Blue = 99
 
-Final Color (222, 200, 190, 0.6) = #C1A999
+Final Color (222, 200, 190) = #C1A999
 
 We can use a simple script to check out answer
 
@@ -445,6 +445,27 @@ result_label.pack()
 root.mainloop()
 ```
 ![My Image1](https://github.com/GoldenZdude/Icosikiatesimal-Color-Space/blob/main/Ico%20To%20Hex.png?raw=true)
-
+131, 109, 99.. hmm..
 Not bad, our answer #C1A999 is pretty close to #CAA899
+
+Lets check out answers. 222, 200, 190 were our original rgb values. 
+```
+def rgb_to_hex(r, g, b):
+    return f'#{r:02x}{g:02x}{b:02x}'
+
+r, g, b = 222, 200, 190
+hex_color = rgb_to_hex(r, g, b)
+print(f'The hexadecimal color code is: {hex_color}')
+```
+r, g, b = 222, 200, 190 = #DEC8BE
+
+Using our first script we can check that 
+
+#DEC8BE = ICO 144, 128, 124
+
+which is a good bit off from 
+
+#C1A999 = ICO 121, 109, 99
+
+But this is not nessessarily supposed to be seen as a problem. If you want to remain precise you can just use sRGB or HEX space, the destructive conversion is really part of the fun.
 
