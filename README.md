@@ -474,6 +474,8 @@ which is a good bit off from
 But this is not nessessarily supposed to be seen as a problem. If you want to remain precise you can just use sRGB or HEX space, the destructive conversion is really part of the fun.
 
 # Distribution of Colors
+
+![My Image2](https://github.com/GoldenZdude/Icosikiatesimal-Color-Space/blob/main/196k.png?raw=true)
 ```
 Total colors analyzed: 196000 ICOSIK Space Colors
 
@@ -495,6 +497,7 @@ Green: 3.81%
 Red: 4.26%
 White: 0.61%
 ```
+![My Image2](3https://github.com/GoldenZdude/Icosikiatesimal-Color-Space/blob/main/196k%20Hex.png?raw=true)
 
 ```
 Total colors analyzed: 196000 HEX/RGB Space Colors
