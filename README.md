@@ -605,8 +605,9 @@ cbar.set_label('Normalized Color Value')
 plt.show(block=True)
 ```
 ***
+Make ICO plot/stats and pie chart
 ```
-# Generate stats and pie chart
+
 import numpy as np
 import matplotlib.pyplot as plt
 from collections import Counter
